@@ -18,7 +18,8 @@ var httpServ = ( cfg.ssl ) ? require('https') : require('http');
 
 var app      = null;
 
-var processRequest = function( req, res ) {
+var processRequest = function( req, res ) 
+{
 
     res.writeHead(200);
     res.end("All glory to WebSockets!\n");
@@ -26,7 +27,8 @@ var processRequest = function( req, res ) {
 
 if ( cfg.ssl ) {
 
-    app = httpServ.createServer({
+    app = httpServ.createServer(
+    {
 
         // providing server with  SSL key/cert
         key: fs.readFileSync( cfg.ssl_key ),
