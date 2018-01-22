@@ -29,9 +29,8 @@
 		app = httpServ.createServer({
 			// providing server with  SSL key/cert
 			key: fs.readFileSync( cfg.ssl_key ),
-			cert: fs.readFileSync( cfg.ssl_cert )
-
-		}, processRequest ).listen( cfg.port );
+			cert: fs.readFileSync( cfg.ssl_cert )}
+		, processRequest ).listen( cfg.port );
 	} else {
 		app = httpServ.createServer( processRequest ).listen( cfg.port );
 	}
