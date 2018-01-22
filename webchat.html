@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <nav class="nav-xs" id="slide-push-menu">
+    <label for="carrie" class="label">Websocket</label>
+    <h3>Menu</h3>
+    <a href="https://carrie.lifengjun.xin/jiwang/client.html">http-client.html</a>
+    <a href="https://carrie.lifengjun.xin/jiwang/client2.html">http-client2.html</a>
+    <a href="https://lifengjun.xin/jiwang/client.html">https-client.html</a>
+    <a href="https://lifengjun.xin/jiwang/client2.html">https-client2.html</a>
+    <a href="https://lifengjun.xin/jiwang/client2.html">https-client2.html</a>
+    <a href="https://lifengjun.xin/jiwang/mywebchat/webchat.html">webchat.html</a>
+  </nav>
+
+  <div id="cover-panel">
+    <div class="button">
+      <input type="text" id="name-input" maxlength="10" placeholder="less than 10" autofocus="autofocus">  
+      <button id="name-reset">reset</button>
+      <button id="name-submit">submit</button>
+      <br>
+      <span id="name-repeat" style="display: none;color: red">用户名重复</span>
+    </div>
+  </div>
+  <div class="status-panel">
+    <span>status:<span class="status-present"></span></span>
+  </div>
+  <div class="container" style="left: 700px;top: 20px;">
+    <div class="header">
+      <span>chat room<span class="online-usercount" style="display: none;">(??)</span><span class="yourname">-yourname</span></span>
+    </div>
+    <div class="content">
+      <div class="info-tips" style="display: none;">
+        <span>下面有<span class="info-number">1</span>条新消息</span>
+      </div>
+      <div class="output-container" style="visibility: hidden;"  id="test">
+        <div class="adv">
+          <span>你是第</span><a class="usercount"></a><span>位进入聊天室</span>
+        </div>
+        <!--  -->
+        <!-- <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312 
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+              <img src="imgs/qqexpression/1.gif" alt="">
+            </span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output">
+          <h3>123123123
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div>
+        <div class="output" >
+          <h3>eee
+            <span>(22:33:44)</span>
+            <span>12312312</span>
+          </h3>
+        </div> -->
+        <!--  -->
+      </div>
+      <div class="input-container">
+       <div class="input-panel">
+        <textarea class="input" maxlength="400" placeholder="最大字符400"></textarea>
+      </div>
+      <div class="button">
+        <button type="reset" id="input-reset">清除</button>
+        <button type="submit" id="submit">发送</button>
+        <button type="button" id="face-btn">表情
+          <div class="panel">
+            <p class="loading">表情加载中,请稍后...</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src='script/drag.js'></script>
+<script src='script/script.js'></script>
+<script src='script/expression.js'></script>
+</body>
+</html>
