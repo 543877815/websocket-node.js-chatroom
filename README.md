@@ -1,8 +1,8 @@
 # websocket-node.js-chatroom
-this is for http
+this is for http;
 const wss = new WebSocket.Server({ port: 8181 });
 
-this is for https
+this is for https;
 var WebSocketServer = require('ws').Server,
   fs = require('fs');
 
@@ -20,16 +20,13 @@ var app      = null;
 
 var processRequest = function( req, res ) 
 {
-
     res.writeHead(200);
     res.end("All glory to WebSockets!\n");
 };
 
 if ( cfg.ssl ) {
-
     app = httpServ.createServer(
     {
-
         // providing server with  SSL key/cert
         key: fs.readFileSync( cfg.ssl_key ),
         cert: fs.readFileSync( cfg.ssl_cert )
@@ -37,7 +34,6 @@ if ( cfg.ssl ) {
     }, processRequest ).listen( cfg.port );
 
 } else {
-
     app = httpServ.createServer( processRequest ).listen( cfg.port );
 }
 
